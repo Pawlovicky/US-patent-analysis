@@ -6,7 +6,6 @@ import os
 def download_all_links(lnk, target_dir):
     headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko"\
                "/20100101 Firefox/57.0",}
-
     rr = requests.get(lnk, headers=headers)
     html = rr.content
     soup = BeautifulSoup(html, "html.parser")
